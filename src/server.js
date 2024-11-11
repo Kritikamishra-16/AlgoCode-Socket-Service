@@ -29,7 +29,7 @@ io.on("connection", (socket)=>{
         const connectionId = await redisCache.get(userId);
         socket.emit('connectionId', connectionId);
         const allConnections = await redisCache.keys('*');
-        console.log(allConnections);
+        // console.log(allConnections);
     });
 });
 
